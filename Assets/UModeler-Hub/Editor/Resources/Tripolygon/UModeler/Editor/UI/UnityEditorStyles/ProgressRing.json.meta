@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b689fb59a3184edabfd96d188ee64ff
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254983
+  packageName: UModeler X Basic
+  packageVersion: X Basic 1.0.2 / Hub 1.0.1
+  assetPath: Assets/UModeler-Hub/Editor/Resources/Tripolygon/UModeler/Editor/UI/UnityEditorStyles/ProgressRing.json
+  uploadId: 710097

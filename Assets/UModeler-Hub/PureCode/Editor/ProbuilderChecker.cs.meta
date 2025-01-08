@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 347b4fc0e074a824aab5b3e7f98af2ce
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254983
+  packageName: UModeler X Basic
+  packageVersion: X Basic 1.0.2 / Hub 1.0.1
+  assetPath: Assets/UModeler-Hub/PureCode/Editor/ProbuilderChecker.cs
+  uploadId: 710097

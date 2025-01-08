@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 40830096186f24b67885efb5197803eb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254983
+  packageName: UModeler X Basic
+  packageVersion: X Basic 1.0.2 / Hub 1.0.1
+  assetPath: Assets/UModeler-Hub/PureCode/Editor/VSAttributionCode.cs
+  uploadId: 710097

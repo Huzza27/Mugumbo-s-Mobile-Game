@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FantasyValley_WATER_01
+  m_Shader: {fileID: -6465566751694194690, guid: 2b34b060fd6d3c94586ed86402e72d67, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - CustomNormal_Extra:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - CustomNormal_MAIN:
+        m_Texture: {fileID: 2800000, guid: 07f70fd5b8348554fa84fbc486382729, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - CausticScale: 1314
+    - DeepFoamAmount: 1.031
+    - Depth: 0
+    - Displacement: 0.2
+    - FlareDensity: 2500
+    - FlarePower: 20
+    - FlareSpeed: 1
+    - FoamAmount: 0.1
+    - FoamCut: 2
+    - FoamPosition: 5
+    - FoamScale: 3000
+    - FoamSpeed: 100
+    - NormalSpeed: 0.05
+    - NormalStrength: 0.2
+    - NormalTiling: 40
+    - Smoothness: 1
+    - Strength: 0.25
+    - Vector1_183DC44A: 100
+    - Vector1_19FCAB53: 10
+    - Vector1_24679061: 2
+    - Vector1_3FDFFF6F: 400
+    - Vector1_5B4E9BBD: 2
+    - Vector1_71984CD3: 20
+    - Vector1_7614F572: 750
+    - Vector1_829C0CD3: 1000
+    - Vector1_868C9B28: 10
+    - Vector1_A8732C35: 2
+    - Vector1_AC17F3FC: 0.1
+    - Vector1_B52E5372: 2
+    - Vector1_CB80979B: 0.5
+    - Vector1_D8DC8232: 0.5
+    - Vector1_F5797EF4: 3
+    - WaveIntensity: 0.03
+    - WaveScale: 100
+    - WaveSpeed: 500
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - Color_44E23EC9: {r: 0.9622641, g: 0.9932726, b: 1, a: 0.8666667}
+    - DeepColor: {r: 0.22067462, g: 0.43654606, b: 0.5377358, a: 0.9411765}
+    - DeepFoamColor: {r: 0.6226415, g: 0.2995728, b: 0.2995728, a: 0.92941177}
+    - FlareColor: {r: 0.41568628, g: 0.41568628, b: 0.41568628, a: 1}
+    - FoamColor: {r: 1, g: 1, b: 1, a: 0.9019608}
+    - ShallowColor: {r: 0.24670699, g: 0.6744155, b: 0.6792453, a: 0.7254902}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &4556562383503047924
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9

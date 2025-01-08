@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8b74e1529ae803947a6ccaf9610c792f
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 254983
+  packageName: UModeler X Basic
+  packageVersion: X Basic 1.0.2 / Hub 1.0.1
+  assetPath: Assets/UModeler-Hub/PureCode/Editor/PureCode.asmdef
+  uploadId: 710097

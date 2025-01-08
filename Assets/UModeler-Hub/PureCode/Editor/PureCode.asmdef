@@ -1,0 +1,36 @@
+{
+    "name": "Tripolygon.UModelerX.PureCode.Hub.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.ProBuilder.Editor",
+        "Unity.ProBuilder",
+        "Tripolygon.UModeler.Hub.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "7.1.0",
+            "define": "HDRP_ENABLED"
+        },
+        {
+            "name": "com.unity.probuilder",
+            "expression": "(,6.0.0)",
+            "define": "PROBUILDER_ENABLED"
+        },
+        {
+            "name": "com.unity.probuilder",
+            "expression": "6.0.0",
+            "define": "PROBUILDER_6_0_0"
+        }
+    ],
+    "noEngineReferences": false
+}

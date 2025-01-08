@@ -1,0 +1,4 @@
+repository "Mugumbo-s Mobile Game/Mugumbo-s Mobile Game@1031947@cloud"
+  path "/"
+    br "/main"
+    co "/main"
