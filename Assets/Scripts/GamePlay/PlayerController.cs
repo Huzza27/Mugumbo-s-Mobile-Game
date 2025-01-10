@@ -1,24 +1,44 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    // Movement speed of the player
-    public float moveSpeed = 5f;
+    public DynamicJoystick joystick; // Reference to your joystick
+    public float speed = 5f;         // Movement speed
+    public float rotationSpeed = 10f; // Speed for smooth rotation
 
-    // Update is called once per frame
-    void Update()
+    private Rigidbody rb;            // Reference to Rigidbody for physics-based movement
+
+    [SerializeField] PlayAnimatorController animController;
+    Animator animator;
+
+    void Start()
     {
-        // Get input from WASD or arrow keys
-        float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        float moveZ = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+    }
 
-        // Normalize the direction to ensure consistent speed in all directions
-        Vector3 moveDirection = new Vector3(moveX, 0f, moveZ).normalized;
+    void FixedUpdate()
+    {
+        // Get input from the joystick
+        float horizontal = joystick.Horizontal;
+        float vertical = joystick.Vertical;
 
-        // Calculate new position
-        Vector3 newPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
+        // Create a movement vector based on joystick input
+        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
-        // Update the player's position
-        transform.position = newPosition;
+        // Apply movement
+        if (direction.magnitude >= 0.1f)
+        {
+            PlayAnimatorController.SetBoolForAnimator(animator, true, "isMoving");
+            rb.MovePosition(rb.position + -direction * speed * Time.fixedDeltaTime);
+
+            // Rotate the player to face the movement direction
+            Quaternion targetRotation = Quaternion.LookRotation(-direction);
+            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
+        }
+        else
+        {
+            PlayAnimatorController.SetBoolForAnimator(animator, false, "isMoving");
+        }
     }
 }
