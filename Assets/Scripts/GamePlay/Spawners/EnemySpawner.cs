@@ -1,56 +1,79 @@
-using Unity.Collections;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class EnemySpawner : MonoBehaviour
 {
-    
     private static bool spawnerEnabled;
     private static EnemySpawner instance;
     public GameObject goblin;
+    private bool canSpawn = true;
+    public float spawnerDelay;
 
+    public delegate void SpawnerStatusChanged(EnemySpawner spawner, bool enabled);
+    public static event SpawnerStatusChanged OnSpawnerStatusChanged;
 
-    /*<summary>
-     * This method adds or removes the EnemySpawner instance from the activeSpawners list in 'SpawnController'
-     * </summary>
-     * <params>
-     * This method currently takes no parameters, but that will change as I add monster progression
-     * </param>
-     * <returns>
-     * void
-     * </returns>
-     */
-    void AddOrRemoveSpawnerFromActiveList()
+    private void Start()
     {
-        if(spawnerEnabled)
-        {
-            SpawnController.activeSpawners.Add(instance);
-        }
-        else
-        {
-            SpawnController.activeSpawners.Remove(instance);
-        }
+        instance = this;
+        SetSpawnerEnabled(true, instance); // Initially add to active spawners list
     }
-
 
     /*<summary>
      * This method spawns (right now only a goblin) at the location of this object
      * </summary>
-     * <params>
-     * This method currently takes no parameters, but that will change as I add monster progression
-     * </param>
-     * <returns>
-     * void
-     * </returns>
      */
     public void SpawnEnemy()
     {
+        if(!canSpawn)
+        {
+            Debug.Log("Spawner is cooling down");
+            return;
+        }
+        Debug.Log("Spawning Enemy");
         Instantiate(goblin, transform.position, Quaternion.identity);
+        SpawnController.enemyCount++;
+        Debug.Log(SpawnController.enemyCount + " enemies spawned");
+        canSpawn = false;
+        
+
     }
 
-    private void Start()
-    { 
-        AddOrRemoveSpawnerFromActiveList();
+    
+
+
+
+    /*<summary>
+     * Static method to retrieve the instance of this class
+     * </summary>
+     * <return>
+     * returns enemy spawner instance
+     * </return>
+     */
+    public static EnemySpawner GetInstance()
+    {
+        return instance;
+    }
+
+    /*<summary>
+    * Retrieves value of spawnerEnabled bool
+    * </summary>
+    * <return>
+    * returns value of spawnerEnabled
+    * </return>
+    */
+    public static bool isEnabled()
+    {
+        return spawnerEnabled;
+    }
+
+
+    /*<summary>
+    * Setter function for spawnerEnabled property
+    * </summary>
+    */
+    public static void SetSpawnerEnabled(bool value, EnemySpawner spawner)
+    {
+        spawnerEnabled = value;
+        OnSpawnerStatusChanged?.Invoke(spawner, value);
     }
 }
